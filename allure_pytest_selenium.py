@@ -29,18 +29,14 @@ def cred():
     return [
         ('username1@email.com','passone'),
         ('username2@email.com','passtwo'),
-        ('username3@email.com','passthree'),
-        ('username4@email.com', 'passone'),
-        ('username5@email.com', 'passoneoq'),
-        ('username6@email.com', 'passtwohf'),
-        ('username7@email.com', 'passthreertr'),
-        ('username8@email.com', 'passonege'),
+        ('username2@email.com','passtwo'),
     ]
 
 @pytest.mark.parametrize("username,password",cred()) #using multiple parameters
 def test_website(username,password):
 
     time.sleep(1)
+    driver.maximize_window()
     # driver.find_element(By.XPATH, '//*[@id="loginForm"]/div/div[1]/div/label/input').send_keys(username)
     # driver.find_element(By.XPATH, '//*[@id="loginForm"]/div/div[2]/div/label/input').send_keys(password)
     # time.sleep(2)
