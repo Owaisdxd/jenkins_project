@@ -28,8 +28,8 @@ def teardown_function():
 def cred():
     return [
         ('username1@email.com','passone'),
-        ('username2@email.com','passtwo'),
-        ('username2@email.com','passtwo'),
+        ('804awias@email.com','passtwo'),
+        ('owaidxd2@email.com','passtwo'),
     ]
 
 @pytest.mark.parametrize("username,password",cred()) #using multiple parameters
