@@ -39,9 +39,6 @@ def test_website(username,password):
     time.sleep(1)
     # print("Work is done")
     driver.maximize_window()
-    driver.find_element(By.XPATH, '//*[@id="loginForm"]/div/div[1]/div/label/input').send_keys(username)
-    driver.find_element(By.XPATH, '//*[@id="loginForm"]/div/div[2]/div/label/input').send_keys(password)
-    time.sleep(2)
     allure.attach(driver.get_screenshot_as_png(),name="report",attachment_type=AttachmentType.PNG)
 
 #Note you need to run below command to access the report
