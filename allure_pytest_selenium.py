@@ -30,6 +30,10 @@ def cred():
         ('username1@email.com','passone'),
         ('804awias@email.com','passtwo'),
         ('owaidxd2@email.com','passtwo'),
+        ('username4@email.com', 'passone12'),
+        ('804awias5@email.com', 'passtwo34'),
+        ('owaidxd20@email.com', 'passtwo56'),
+
     ]
 
 @pytest.mark.parametrize("username,password",cred()) #using multiple parameters
@@ -38,10 +42,9 @@ def test_website(username,password):
     time.sleep(1)
     print("Work is done")
     driver.maximize_window()
-    # driver.find_element(By.XPATH, '//*[@id="loginForm"]/div/div[1]/div/label/input').send_keys(username)
-    # driver.find_element(By.XPATH, '//*[@id="loginForm"]/div/div[2]/div/label/input').send_keys(password)
-    # time.sleep(2)
-    time.sleep(3)
+    driver.find_element(By.XPATH, '//*[@id="loginForm"]/div/div[1]/div/label/input').send_keys(username)
+    driver.find_element(By.XPATH, '//*[@id="loginForm"]/div/div[2]/div/label/input').send_keys(password)
+    time.sleep(2)
     allure.attach(driver.get_screenshot_as_png(),name="report",attachment_type=AttachmentType.PNG)
 
 #Note you need to run below command to access the report
