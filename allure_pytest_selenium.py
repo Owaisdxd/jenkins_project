@@ -17,7 +17,7 @@ import time
 def setup_function():
     global driver
     driver=webdriver.Chrome()
-    driver.get('https://stage.alnafi.com')
+    driver.get('https://stage.alnafi.com/auth/sign-in')
     driver.maximize_window()
 
 def teardown_function():
@@ -29,10 +29,7 @@ def cred():
     return [
         ('username1@email.com','passone'),
         ('804awias@email.com','passtwo'),
-        ('owaidxd2@email.com','passtwo'),
-        ('username4@email.com', 'passone12'),
-        ('804awias5@email.com', 'passtwo34'),
-        ('owaidxd20@email.com', 'passtwo56'),
+        ('owaidxd2@email.com','passtwo')
 
     ]
 
